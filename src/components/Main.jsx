@@ -3,7 +3,7 @@ import { useState } from "react"
 
 const Main = () => {
 
-  const [selectedLanguage, setSelectedLanguage] = useState(1)
+  const [selectedLanguage, setSelectedLanguage] = useState(0)
 
   return (
     <main>
@@ -17,8 +17,8 @@ const Main = () => {
 
       <div className="container">
         <div className="language-card">
-          <h5>{languages.find(language => language.id === selectedLanguage).title}</h5>
-          <p>{languages.find(language => language.id === selectedLanguage).description}</p>
+          <h5>{selectedLanguage === 0 ? '' : languages.find(language => language.id === selectedLanguage).title}</h5>
+          <p>{selectedLanguage === 0 ? 'Nessun linguaggio selezionato' : languages.find(language => language.id === selectedLanguage).description}</p>
         </div>
       </div>
     </main>
