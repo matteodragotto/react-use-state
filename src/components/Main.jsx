@@ -1,4 +1,5 @@
 import languages from "../../data/languages"
+import LanguageCard from "./LanguageCard"
 import { useState } from "react"
 
 const Main = () => {
@@ -16,10 +17,8 @@ const Main = () => {
       </ul>
 
       <div className="container">
-        <div className="language-card">
-          <h5>{selectedLanguage === 0 ? '' : languages.find(language => language.id === selectedLanguage).title}</h5>
-          <p>{selectedLanguage === 0 ? 'Nessun linguaggio selezionato' : languages.find(language => language.id === selectedLanguage).description}</p>
-        </div>
+        <LanguageCard languages={languages} selectedLanguage={selectedLanguage} />
+
       </div>
     </main>
   )
