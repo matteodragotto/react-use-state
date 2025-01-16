@@ -5,13 +5,16 @@ const Main = () => {
   return (
     <main>
       <ul>
-        <li><button>AAAA</button></li>
-        <li><button>AAAA</button></li>
-        <li><button>AAAA</button></li>
-        <li><button>AAAA</button></li>
-        <li><button>AAAA</button></li>
-        <li><button>AAAA</button></li>
+        {languages.map(language => (
+          <li key={language.id}><button>{language.title}</button></li>
+        ))}
       </ul>
+
+      <div className="container">
+        <div className="language-card">
+          <p></p>
+        </div>
+      </div>
     </main>
   )
 }
