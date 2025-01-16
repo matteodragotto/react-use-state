@@ -1,14 +1,15 @@
 import languages from "../../data/languages"
+import { useState } from "react"
 
 const Main = () => {
 
-  const selectedLanguage = 2
+  const [selectedLanguage, setSelectedLanguage] = useState(1)
 
   return (
     <main>
       <ul>
         {languages.map(language => (
-          <li key={language.id}><button>{language.title}</button></li>
+          <li key={language.id}><button onClick={() => setSelectedLanguage(language.id)}>{language.title}</button></li>
         ))}
       </ul>
 

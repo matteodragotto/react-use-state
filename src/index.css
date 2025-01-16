@@ -33,7 +33,11 @@ ul {
       border: none;
       padding: 15px 20px;
       border-radius: 10px;
-      font-size: 1.1rem
+      font-size: 1.1rem;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }
