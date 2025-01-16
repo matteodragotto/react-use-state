@@ -15,6 +15,7 @@ const Main = () => {
 
       <div className="container">
         <div className="language-card">
+          <h5>{languages.find(language => language.id === selectedLanguage).title}</h5>
           <p>{languages.find(language => language.id === selectedLanguage).description}</p>
         </div>
       </div>
