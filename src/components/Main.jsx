@@ -2,6 +2,8 @@ import languages from "../../data/languages"
 
 const Main = () => {
 
+  const selectedLanguage = 2
+
   return (
     <main>
       <ul>
@@ -12,7 +14,7 @@ const Main = () => {
 
       <div className="container">
         <div className="language-card">
-          <p></p>
+          <p>{languages.find(language => language.id === selectedLanguage).description}</p>
         </div>
       </div>
     </main>
