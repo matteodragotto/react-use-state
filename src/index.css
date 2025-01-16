@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+
+}
+
+header {
+  background-color: #F8F9FA;
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 20px;
+}
