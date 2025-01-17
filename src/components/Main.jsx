@@ -1,5 +1,6 @@
 import languages from "../../data/languages"
 import LanguageCard from "./LanguageCard"
+import Buttons from "./Buttons"
 import { useState } from "react"
 
 const Main = () => {
@@ -8,13 +9,7 @@ const Main = () => {
 
   return (
     <main>
-      <ul>
-        {languages.map(language => (
-          <li key={language.id}>
-            <button className={language.id === selectedLanguage ? 'active' : ''} onClick={() => setSelectedLanguage(language.id)}>{language.title}</button>
-          </li>
-        ))}
-      </ul>
+      <Buttons languages={languages} selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} />
 
       <div className="container">
         <LanguageCard languages={languages} selectedLanguage={selectedLanguage} />
